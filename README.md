@@ -6,3 +6,5 @@ Projects can often benefit from audio feedback to the end user. PWM and timers h
 Target Hardware: Raspberry Pi Pico board and a small piezo buzzer.
 
 Goals: Generate simple square waves, then try other using the PIO to generate PWM.
+
+Nothing much here. Just starting ...
