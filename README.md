@@ -5,7 +5,9 @@ Projects can often benefit from audio feedback to the end user. PWM and timers h
 
 Target Hardware: Raspberry Pi Pico board and a small piezo buzzer.  A 100 ohm resistor is connected between the GPIO and the buzzer. This reduces electrical noise on digital pins.
 
-Goals: Generate simple square waves, then try other using the PIO to generate PWM.
+Goals: Generate simple square waves, then try other waves using the PIO to generate PWM.
 
 Nothing much here. Just starting ...
-- sq_tone_demo.py  Generate square wave tone for a piezo buzzer with a specified number of pulses. Main program puts a value to trigger the state machine. The state machine counts the cycles and stops. Frequency is 3951 Hz because that was the loudest note from this buzzer. Buzzer is wired from GPIO0 to GND with a resistor in series.
+- sq_tone_demo.py:  Generate square wave tone for a piezo buzzer with a specified number of pulses. Main program puts a value to trigger the state machine. The state machine counts the cycles and stops. Frequency is 3951 Hz because that was the loudest note from this buzzer. Buzzer is wired from GPIO0 to GND with a resistor in series.
+- pio_5252a.py:  A demo of a push-pull drive for a piezo buzzer. This uses a modified sine pattern in 5-2-5-2 timing. The same buzzer and resistor are connected from GPIO0 to GPIO1.This is much louder. There's no cycle counter yet. SM frequency is 14x the tone (5+2+5+2=14).
+- Next compare to a square push-pull wave.
