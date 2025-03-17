@@ -20,4 +20,5 @@ sm = rp2.StateMachine(0, mod_sine, freq=FREQ*14, set_base=Pin(0), sideset_base=P
 # Start the StateMachine.
 sm.active(1)    # start tone
 time.sleep(1) 
+sm.exec("set(pins, 0) .side(0)")    # return pins to low-low
 sm.active(0)    # stop tone
