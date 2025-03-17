@@ -8,3 +8,4 @@ Target Hardware: Raspberry Pi Pico board and a small piezo buzzer.
 Goals: Generate simple square waves, then try other using the PIO to generate PWM.
 
 Nothing much here. Just starting ...
+- sq_tone_demo.py  Generate square wave tone for a piezo buzzer with a specified number of pulses. Main program puts a value to trigger the state machine. The state machine counts the cycles and stops. Frequency is 3951 Hz because that was the loudest note from this buzzer.
